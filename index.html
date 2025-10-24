@@ -377,34 +377,73 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact">
-    <div class="container">
-      <span class="eyebrow">Contact</span>
-      <h2 class="section-title">Let’s Connect</h2>
-      <div class="card">
-        <p class="section-sub">Prefer email? I usually reply within a day.</p>
-        <div class="stack-16">
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="mailto:saleh.faghfoorian@gmail.com"><strong>Email</strong></a>
-            <!-- <a class="btn" href="https://www.linkedin.com/in/YOUR_HANDLE/" target="_blank" rel="noopener">LinkedIn</a> -->
-            <!-- <a class="btn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a> -->
-          </div>
-          <form class="grid cols-2" name="contact" onsubmit="return false" aria-label="Quick message form (demo)">
-            <label class="card"><span class="sr-only">Your name</span><input aria-label="Your name" required placeholder="Your name" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)"/></label>
-            <label class="card"><span class="sr-only">Your email</span><input aria-label="Your email" type="email" required placeholder="Your email" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)"/></label>
-            <label class="card" style="grid-column:1/-1"><span class="sr-only">Message</span><textarea aria-label="Message" required placeholder="Message" rows="5" style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)"></textarea></label>
-            <div style="grid-column:1/-1"><button class="btn primary" onclick="alert('This demo form does not submit. Connect it to your email or backend.')">Send</button></div>
-          </form>
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h2 class="section-title">Let’s Connect</h2>
+    <div class="card">
+      <p class="section-sub">Prefer email? I usually reply within a day.</p>
+      <div class="stack-16">
+
+        <!-- Contact Buttons -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn" href="mailto:saleh.faghfoorian@gmail.com?subject=Website%20Contact">
+            <strong>Email</strong>
+          </a>
+          <!-- <a class="btn" href="https://www.linkedin.com/in/YOUR_HANDLE/" target="_blank" rel="noopener">
+            LinkedIn
+          </a> -->
+          <!-- <a class="btn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">
+            Google Scholar
+          </a> -->
         </div>
+
+        <!-- Contact Form -->
+        <form class="grid cols-2"
+              action="https://formspree.io/f/mwprgdol"
+              method="POST"
+              aria-label="Contact form">
+
+          <label class="card">
+            <span class="sr-only">Your name</span>
+            <input name="name" aria-label="Your name" required placeholder="Your name"
+                   style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)" />
+          </label>
+
+          <label class="card">
+            <span class="sr-only">Your email</span>
+            <input name="_replyto" aria-label="Your email" type="email" required placeholder="Your email"
+                   style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)" />
+          </label>
+
+          <label class="card" style="grid-column:1/-1">
+            <span class="sr-only">Message</span>
+            <textarea name="message" aria-label="Message" required placeholder="Message" rows="5"
+                      style="width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:transparent; color:var(--text)"></textarea>
+          </label>
+
+          <!-- Spam honeypot -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <!-- Redirect to thank-you page -->
+          <input type="hidden" name="_redirect" value="https://YOUR_USERNAME.github.io/thanks.html" />
+
+          <div style="grid-column:1/-1">
+            <button class="btn primary" type="submit">Send</button>
+          </div>
+        </form>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer class="container center">
     <div style="text-align:center">
       <div style="display:flex; gap:10px; justify-content:center; margin-bottom:10px">
         <a class="btn" href="#home">Back to top</a>
       </div>
-      <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+      <small>© <span id="year"></span> Saleh. All rights reserved.</small>
     </div>
   </footer>
 
@@ -441,6 +480,7 @@
   -->
 </body>
 </html>
+
 
 
 
